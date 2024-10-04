@@ -1,8 +1,13 @@
 // Next, React
+import React from 'react';
+
+import DonationCards from '../../components/DonationCards'; // Import the DonationCards component
 import { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 
 // Wallet
+import DonationCard  from '../../components/DonationCard';
+
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
 // Components
@@ -31,22 +36,20 @@ export const HomeView: FC = ({ }) => {
     <div className="md:hero mx-auto p-4">
       <div className="md:hero-content flex flex-col">
         <div className='mt-6'>
-        <div className='text-sm font-normal align-bottom text-right text-slate-600 mt-4'>v{pkg.version}</div>
         <h1 className="text-center text-5xl md:pl-12 font-bold text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 to-fuchsia-500 mb-4">
-          Solana Next
+          Solaraise
         </h1>
         </div>
         <h4 className="md:w-full text-2x1 md:text-4xl text-center text-slate-300 my-2">
-          <p>Unleash the full power of blockchain with Solana and Next.js 13.</p>
-          <p className='text-slate-500 text-2x1 leading-relaxed'>Full-stack Solana applications made easy.</p>
+          <p>Decentralized Donation Platform</p>
+          <p className='text-slate-500 text-2x1 leading-relaxed'>After a successful donation, we offer you a random NFT as a gift from our NFT pool.</p>
         </h4>
-        <div className="relative group">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-indigo-500 rounded-lg blur opacity-40 animate-tilt"></div>
-          <div className="max-w-md mx-auto mockup-code bg-primary border-2 border-[#5252529f] p-6 px-10 my-2">
-            <pre data-prefix=">">
-              <code className="truncate">{`npx create-solana-dapp <dapp-name>`} </code>
-            </pre>
-          </div>
+        <div className="min-h-screen bg-gray-100 flex justify-center items-center">
+        <DonationCards 
+           address="Bağış Adresi" 
+           description="Bu bir bağış açıklamasıdır." 
+           imageUrl="https://example.com/image.jpg" 
+        />
         </div>
         <div className="flex flex-col mt-2">
           <RequestAirdrop />
@@ -67,3 +70,4 @@ export const HomeView: FC = ({ }) => {
     </div>
   );
 };
+
