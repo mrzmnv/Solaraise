@@ -1,5 +1,8 @@
 
 # Solaraise
+Decentralized Donation Platform
+
+After a successful donation, we offer you a random NFT as a gift from our NFT pool.
 
 ![Screenshot 2024-10-04 at 21 05 22](https://github.com/user-attachments/assets/0efe494d-ed57-4c53-ab17-5c405f5e320d)
 ![Screenshot 2024-10-04 at 21 04 59](https://github.com/user-attachments/assets/1fb0c8d0-16fb-4196-af05-61654f419e46)
